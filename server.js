@@ -11,6 +11,8 @@ const cors = require("cors");
 
 // app.use(cors(corsOptions));
 
+app.use(cors());
+
 const io = require("socket.io")(server, {
   cors: {
     origin: "https://beta.mintflick.app",
@@ -38,8 +40,6 @@ const io = require("socket.io")(server, {
 //   },
 //   allowEIO3: true,
 // });
-
-app.use(cors());
 
 app.get("/", (req, res) => {
   res.send("Live Viewer Working!");
