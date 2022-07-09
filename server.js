@@ -13,7 +13,7 @@ const cors = require("cors");
 
 const io = require("socket.io")(server, {
   cors: {
-    origin: "https://beta.mintflick.app/",
+    origin: "https://beta.mintflick.app",
     methods: ["GET", "POST"],
     transports: ["websocket", "polling"],
     credentials: true,
